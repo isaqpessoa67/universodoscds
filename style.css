@@ -1,0 +1,670 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;800;900&display=swap');
+
+@font-face {
+    font-family: 'lemon milk';
+    src: url(fonts/LEMONMILK-Bold.otf);
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.button {
+    cursor: pointer;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    height: 110%;
+    width: 100%;
+    background-color: #c800ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #c800ff;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 62px;
+  }
+  
+  .navbar .menu-items {
+    display: flex;
+    background-color: #c436b1;
+  }
+  
+  .navbar .nav-container li {
+    list-style: none;
+    border-radius: 5px;
+  }
+  
+  .navbar .nav-container a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+  
+  .navbar .nav-container a:hover{
+      color: #f949b2;
+      transition: 0.5s ease-in-out;
+  }
+
+  .navbar .nav-container li:hover {
+    background-color: #ffffff;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .nav-container {
+    display: block;
+    position: relative;
+  }
+  
+  .nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #ffffff;
+  }
+  
+  .nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .navbar .menu-items {
+    padding-top: 120px;
+    box-shadow:  0 0 20px #4060553b;
+    height: 80vh;
+    width: 110%;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -70px;
+
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
+    border-radius: 20px;
+  }
+  
+  .navbar .menu-items li {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+
+  .profile {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 1.2rem;
+    color: #0e2431;
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .logo{
+    display: none;
+  }
+
+#divCadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 50%;
+    min-height: 70%;
+    background-color: #ce2ffb;
+    border-radius: 51px;
+    box-shadow:  50px 50px 100px #1d1d1d11, -50px -50px 100px #75757510;
+}
+
+#divCarrinho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 50%;
+    min-height: 70%;
+    background-color: #ce2ffb;
+    border-radius: 51px;
+    box-shadow:  50px 50px 100px #1d1d1d11, -50px -50px 100px #75757510;
+}
+
+#divVendidos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: min-content;
+    padding: 40px;
+    min-height: 70%;
+    background-color: #ce2ffb;
+    border-radius: 51px;
+    box-shadow:  50px 50px 100px #1d1d1d11, -50px -50px 100px #75757510;
+}
+
+#divPromo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    padding: 20px;
+    height: fit-content;
+    background-color: #ce2ffb;
+    border-radius: 51px;
+    box-shadow:  50px 50px 100px #1d1d1d11, -50px -50px 100px #75757510;
+}
+
+#divEscolhido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: min-content;
+    padding: 40px;
+    min-height: 70%;
+    background-color: #ce2ffb;
+    border-radius: 51px;
+    box-shadow:  50px 50px 100px #1d1d1d11, -50px -50px 100px #75757510;
+}
+
+#divConfirmacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: min-content;
+    padding: 40px;
+    min-height: 70%;
+    background-color: #ce2ffb;
+    border-radius: 51px;
+    box-shadow:  50px 50px 100px #1d1d1d11, -50px -50px 100px #75757510;
+}
+
+#divCadastro h1 {
+    font-family: 'lemon milk';
+}
+
+#divVendidos h1 {
+    font-family: 'lemon milk';
+}
+
+#divCarrinho h1 {
+    font-family: 'lemon milk';
+}
+
+#divBusca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#txtBusca {
+    width: 280px;
+    height: 40px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    border: none;
+}
+
+.button {
+    width: 150px;
+    margin: 5px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    color: #f949b2;
+    border-radius: 20px;
+}
+
+.button-pink {
+    height: 40px;
+    width: 70px;
+    background-color: #f949b2;
+    color: white;
+    border-radius: 20px;
+    border: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+#titulo {
+    color: rgb(255, 255, 255);
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divLogin {
+    display: flex;
+    align-items: center;
+}
+
+.divForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divForm p {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.divForm p:hover {
+    background-color: #f949b2;
+}
+
+.boxCadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boxCarrinho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+}
+
+.boxVendidos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 550px;
+}
+
+.boxConfirmacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 550px;
+    height: 500px;
+    justify-content: space-evenly;
+}
+
+.promocoesBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+
+}
+
+.boxPromo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+
+#divHome {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-width: 50%;
+    min-height: 70%;
+    background-color: #ce2ffb;
+    border-radius: 51px;
+    box-shadow:  50px 50px 100px #1d1d1d11, -50px -50px 100px #75757510;
+}
+
+#divHome h1 {
+    font-family: 'lemon milk';
+}
+
+#divPromo h1 {
+    font-family: 'lemon milk';
+}
+
+#divConfirmacao h1 {
+    font-family: 'lemon milk';
+}
+
+#divCadastro {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+}
+
+#divCadastro input {
+    margin: 15px;
+}
+
+.divc1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.divc2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.cdPic {
+    width: 230px;
+}
+
+.mais_vendidosBox {
+    display: flex;
+    width: 550px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.mais_vendidosBox2 {
+    display: flex;
+    width: 550px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.cdEscolhido_box {
+    display: flex;
+    width: 650px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.promocoesbox {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cdEscolhido {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+    align-items: center;
+}
+
+.cdEscolhido h2 {
+    background-color: #f949b2;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.cd1, .cd2{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px;
+}
+
+.cd3 {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px;
+}
+
+.cd1 img {
+    margin-right: 10px;
+}
+
+.cd2 img {
+    margin-right: 10px;
+}
+
+.cd3 img {
+    margin-right: 10px;
+}
+
+#selectAno {
+    background-color: #f949b2;
+    color: white;
+}
+
+.textVendidos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.textVendidos select {
+    width: 10%;
+    height: 40px;
+}
+
+.textEscolhido {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;
+    font-size: 20px;
+    align-items: center;
+}
+
+.textEscolhido select {
+    width: 10%;
+    height: 40px;
+}
+
+.textEscolhido h2, p {
+    margin: 5px;
+}
+
+.buttonCompra {
+    flex-direction: row;
+}
+
+.quantidadeSelect_box {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    justify-content: center;
+}
+
+.itensCarrinho {
+    width: 100%;
+    height: 60%;
+}
+
+#item1 {
+    background-color: white;
+    display: flex;
+    width: 40%;
+    padding: 20px;
+    flex-direction: row;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+#item1 {
+    font-family: 'Poppins', sans-serif;
+}
+
+#itemImage {
+    width: 100px;
+}
+
+.textCarrinho {
+    color: #f949b2;
+}
+
+.itemButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.itemButtons input {
+    width: 100px;
+    color: #f949b2;
+    border-style: none;
+    
+}
+
+.itemButtons select {
+    width: 100px;
+}
+
+.totalCarrinho {
+    height: 25%;
+    width: 100%;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
+
+.totalCarrinho h1 {
+    color: #f949b2;
+}
+
+.totalCarrinho p {
+    color: #f949b2;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.continuarButton {
+    display: flex;
+}
+
+#continuarB {
+    background-color: #f949b2;
+    color: white;
+}
+
+#continuarB2 {
+    background-color: #ff6fc5;
+    color: white;
+}
+
+.conta {
+    display: flex;
+    min-width: 40%;
+    flex-direction: row;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pagamentoConfirmado {
+    background-color: #c800ff;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.pagamentoConfirmado h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.anosButton {
+    display: flex;
+    flex-direction: row;
+}
+
+.anosButton input {
+    width: 100px;
+}
+
+
+.blocks {
+    display: flex;
+}
+
+.diva {
+  display: block;
+}
+
+.divb {
+  display: none;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .cd1, .cd2{
+         font-family: 'Poppins', sans-serif;
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         margin: 10px;
+        }
+
+        .cd3 {
+         font-family: 'Poppins', sans-serif;
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         margin: 10px;
+        }
+        @media screen and
+         (min-width: 200px) and
+        (max-width: 640px) {
+        .promocoesBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 550px;
+        }
+        .cd1, .cd2{
+         font-family: 'Poppins', sans-serif;
+         display: flex;
+         flex-direction: row;
+         width: 100%;
+         margin: 10px;
+        }
+
+        .cd3 {
+         font-family: 'Poppins', sans-serif;
+         display: flex;
+         flex-direction: row;
+         width: 100%;
+         margin: 10px;
+        }
+}
+    </style>
+</head>
+<body>
+<nav>
+        <div class="navbar">
+          <div class="container nav-container">
+              <input class="checkbox" type="checkbox" name="" id="" />
+              <div class="menuin">
+              <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+              </div>  
+            </div>
+            <div class="menu-items">
+            <li><a href="universoHome-comLogin.php">Home</a></li>
+              <li><a href="maisVendidos.php">Mais vendidos</a></li>
+              <li><a href="promocoes.php">Promoções</a></li>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <div class = "container">
+        <div id = "divPromo">
+        <div class="boxPromo">
+        <div class = "logo">
+                <div id = "titulo">
+                <h1>Promoções</h1>
+                </div>
+         </div>
+        <div class="promocoesBox">
+            <div class="cd1">
+            <img src="img/decretosreais.png" alt="Decretos Reais" class = "cdPic">
+            <div class="textVendidos">
+            <h2>Marília Mendonça</h2>
+            <p>Decretos Reais Vol. 2</p>
+            <p>De: R$59,99</p>
+            <p>Por: R$39,99</p>
+            <a href="">
+            <a href="decretospage.php">
+            <input type="button" value="Comprar" class = "button">
+            </a>
+            </a>
+            </div>
+            </div>
+            <div class="cd2">
+                <img src="img/bornpink.png" alt="Born Pink" class = "cdPic">
+                <div class="textVendidos">
+                <h2>BLACKPINK</h2>
+                <p>Born Pink</p>
+                <p>De: R$59,99</p>
+                <p>Por: R$39,99</p>
+                <a href="esgotado.php">
+                <input type="button" value="Comprar" class = "button">
+                </a>
+                </div>
+            </div>
+            <div class="cd3">
+                <img src="img/racanegra.jpeg" alt="Midnights" class = "cdPic">
+                <div class="textVendidos">
+                <h2>Raça Negra</h2>
+                <p>Self Titled</p>
+                <p>De: R$59,99</p>
+                <p>Por: R$39,99</p>
+                <a href="esgotado.php">
+                <input type="button" value="Comprar" class = "button">
+                </a>
+                </div>
+            </div>
+        </div>
+        <div class="voltarB"></div>
+            <a href="universoHome-comLogin.php">
+            <input type="button" value="Voltar" class = "button">
+            </a>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
