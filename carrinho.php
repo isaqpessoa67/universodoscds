@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
-    <script src="js/script2.js" defer></script>
 </head>
 <body>
 <nav>
@@ -63,7 +62,7 @@
         <div class="totalCarrinho">
           <div class="totalFrete">
           <h1>Total com frete:</h1>
-          <p id = "precoTotal">R$ 59,99</p>
+          <p id = "precoTotal"></p>
           </div>
           <div class="continuarButton">
             <a href="selecionarEndereco.php">
@@ -77,5 +76,6 @@
         </div>
         </div>
     </div>
+    <script src="js/scripts.js" defer></script>
 </body>
 </html>

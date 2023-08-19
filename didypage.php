@@ -34,7 +34,7 @@
             <img src="img/didy.jpeg" alt="Blue Banisters" class = "cdPic">
             <div class="textEscolhido">
             <h2>Lana Del Rey - Did You Know That <br> Theres a Tunnel Under Ocean Blvd</h2>
-            <p>R$59,99</p>
+            <p id = "anuncioPreco"></p>
             <p>Envio: grátis</p>
             <p>Chegará sexta-feira, dia 26 de maio</p>
             <div class="quantidadeSelect_box">
@@ -70,5 +70,6 @@
         </div>
         </div>
     </div>
+    <script src="js/scripts.js" defer></script>
 </body>
 </html>
