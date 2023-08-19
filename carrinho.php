@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
-    <script src="js/scripts.js" defer></script>
+    <script src="js/script2.js" defer></script>
 </head>
 <body>
 <nav>
@@ -42,7 +42,7 @@
               <img src="img/didy.jpeg" alt="Lana Del Rey" id = "itemImage">
               </div>
               <div class="itemButtons">
-              <h3 class = "textCarrinho">Lana Del Rey - Didy</h3>
+              <h3 class = "textCarrinho" id = "cdDidy">Lana Del Rey - Didy</h3>
                 <input type="button" value="Excluir" id = "excluirBtn">
                 <select name="quantidade" id = "selectAno">
                 <option value="1">1</option>
@@ -56,14 +56,14 @@
                 <option value="9">9</option>
                 <option value="10">10</option>
               </select>
-              <P class = "textCarrinho" id = "preco">Preço: 59,99</P>
+              <P class = "textCarrinho" id = "preco"></P>
               </div>
             </div>
         </div>
         <div class="totalCarrinho">
           <div class="totalFrete">
           <h1>Total com frete:</h1>
-          <p>R$ 59,99</p>
+          <p id = "precoTotal">R$ 59,99</p>
           </div>
           <div class="continuarButton">
             <a href="selecionarEndereco.php">
