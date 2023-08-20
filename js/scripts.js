@@ -1,14 +1,17 @@
+var precoCd = 89.99
+
 document.addEventListener("DOMContentLoaded", function() {
 var container = document.getElementById("item1")
-var total = document.getElementById("precoTotal")
 var button =  document.getElementById("excluirBtn")
-var textPreco = document.getElementById("preco")
-var precoCd = 75.99
-
 var addCd = document.getElementById("selectAno")
-total.textContent = `R\$ ${precoCd}`
+var textPreco = document.getElementById("preco")
 
+var total = document.getElementById("precoTotal")
+
+total.textContent = `R\$ ${precoCd}`
 textPreco.textContent = `R\$ ${precoCd}`
+
+
 
 button.addEventListener("click", function () {
     if(container.style.display === "none") {
@@ -64,3 +67,6 @@ addCd.addEventListener("change", function () {
 })
 
 });
+
+var anuncioDidy = document.querySelector(".didyPreco")
+anuncioDidy.textContent = `R\$ ${precoCd}`
