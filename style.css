@@ -500,7 +500,7 @@ body {
     margin-right: 10px;
 }
 
-#selectAno {
+.selectAno {
     background-color: #f949b2;
     color: white;
 }

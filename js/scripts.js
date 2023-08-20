@@ -3,7 +3,7 @@ var precoCd = 89.99
 document.addEventListener("DOMContentLoaded", function() {
 var container = document.getElementById("item1")
 var button =  document.getElementById("excluirBtn")
-var addCd = document.getElementById("selectAno")
+var addCd = document.querySelector(".selectAno")
 var textPreco = document.getElementById("preco")
 
 var total = document.getElementById("precoTotal")
@@ -11,7 +11,7 @@ var total = document.getElementById("precoTotal")
 total.textContent = `R\$ ${precoCd}`
 textPreco.textContent = `R\$ ${precoCd}`
 
-
+cdQuantidade = addCdQuantidade.value
 
 button.addEventListener("click", function () {
     if(container.style.display === "none") {
